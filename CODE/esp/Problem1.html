@@ -1,0 +1,135 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function setdate()
+{
+var a=document.problem.day1.value;
+var b=document.problem.month1.value;
+var c=document.problem.year1.value;
+document.problem.probdate.value=a+"-"+b+"-"+c;
+}
+function setnotidate()
+{
+var a=document.problem.day2.value;
+var b=document.problem.month2.value;
+var c=document.problem.year2.value;
+document.problem.probnotidate.value=a+"-"+b+"-"+c;
+}
+function setvalue()
+{
+var a=document.problem.prob.value;
+document.problem.probabout.value=a;
+}
+function setpriority()
+{
+var a=document.problem.prob1.value;
+document.problem.probattach.value=a;
+}
+function back()
+{
+window.history.back();
+}
+
+//-->
+</SCRIPT>
+</head>
+<BODY background="images/mos.gif" text="white" alink="red" vlink="white" link="cornsilk">
+<A HREF="http://localhost:8081/esp/index.html"><IMG SRC="images\LOGO.GIF" width=200 height=30 border=0 style="position:relative;left:15.5%;top:6%">
+</A><hr ALIGN=left SIZE=1 NOSHADE COLOR="red" width=550 style="position:relative;left:16%;top:4%"><BR><BR>
+
+ <center> <font size="" color="yellow"><h3>Problem Details</h3></font>
+<FORM name=problem METHOD=POST ACTION="http://localhost:8081/esp/probadd11.jsp">
+<b>
+<TABLE style="position:absolute;left:20%;top:30%">
+<TR>
+	<TD>Problem Posted By (Enter User Name)</TD>
+	<TD><INPUT TYPE="text" NAME="probpost" size=15></TD>
+	<td><img src="images/LAPTOP1.GIF" width=100 height=44></td>
+</TR>
+<TR>
+	<TD>Problem About</TD>
+	<TD><SELECT NAME="prob">
+	<option selected>--select any one--</option>
+	<option value="Network">Network</option>
+	<option value="Database">Database</option>
+	<option value="Hardware">Hardware</option>
+	<option value="Software">Software</option>
+	</SELECT>
+	<INPUT TYPE="hidden" name="probabout">
+	</TD>
+</TR>
+<TR>
+	<TD>Problem Description</TD>
+	<TD><TEXTAREA NAME="probdesc" ROWS="5" COLS="20" onFocus="setvalue()" ></TEXTAREA></TD>
+</TR>
+<TR>
+	<TD>Problem Priority (very urgent/urgent/normal) </TD>
+	<TD><select name="prob1" onChange="setpriority()">
+       	          <option selected>--select any one--</option>
+	          <option value="very urgent">very urgent</option>
+	          <option value="urgent">urgent</option>	
+	          <option value="normal">normal</option>
+	          </select>
+	          <INPUT TYPE="hidden" name="probattach">
+	</TD>
+</TR>
+<TR><td>Problem found on</td>
+	<td><INPUT TYPE="text" NAME="day1" size=2 >
+			 <SELECT NAME="month1">
+			 <option selected >Month</option>
+			 <option value="jan">Jan</option>
+			 <option value="feb">Feb</option>
+			 <option value="mar">Mar</option>
+			 <option value="apr">Apr</option>
+			 <option value="may">May</option>
+			 <option value="jun">Jun</option>
+			 <option value="jul">Jul</option>
+			 <option value="aug">Aug</option>
+		                  <option value="sep">Sep</option>
+			<option value="oct">Oct</option>
+			<option value="nov">Nov</option>
+			<option value="dec">Dec</option>
+			</SELECT>
+			<b>Year</b><input type="text"name="year1" size=4 onblur="setdate()"></td>
+			<input type="hidden" name="probdate"> 
+</TR>
+<TR>
+	<TD>Problem Notified on</TD>
+	<td><INPUT TYPE="text" NAME="day2" size=2>
+			 <SELECT NAME="month2">
+			 <option selected >Month</option>
+			 <option value="jan">Jan</option>
+			 <option value="feb">Feb</option>
+			 <option value="mar">Mar</option>
+			 <option value="apr">Apr</option>
+			 <option value="may">May</option>
+			 <option value="jun">Jun</option>
+			 <option value="jul">Jul</option>
+			 <option value="aug">Aug</option>
+		                   <option value="sep">Sep</option>
+			<option value="oct">Oct</option>
+			<option value="nov">Nov</option>
+			<option value="dec">Dec</option>
+			</SELECT><b>
+			Year</b><input type="text"name="year2" size=4 onblur="setnotidate()"></td>
+			<input type="hidden" name="probnotidate"> 
+</TR>
+<tr><td><br></td></tr>
+<TR>
+	<TD align=center><INPUT TYPE="submit"value="Send&nbsp;&nbsp;Now "></td>
+	<td align=left><INPUT TYPE="reset" value="Clear&nbsp;&nbsp;& Re-enter details"></TD>
+		</TR>
+		<tr><td><br></td></tr>
+		<tr>
+	<td  align=center>&nbsp;&nbsp;&nbsp;&nbsp;<a 
+ href="http://localhost:8081/esp/index.html"><font size="" color="YELLOW"><b>HOMEPAGE</b></FONT></a>
+</td>
+<td><INPUT TYPE="submit" value="BACK" onClick="back()"></td>
+	</TR>
+	
+</TABLE>
+</b></center>
+</FORM>
+</BODY>
+</HTML>

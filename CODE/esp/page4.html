@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<script language="javascript">
+<!--
+ok = false; pick = 4;
+if (navigator.userAgent.indexOf ("Mozilla") != -1) {
+  ok = parseInt(navigator.appVersion.substring(0,1)) >= 3
+} else {}
+
+   if (ok == 1) {
+      dot = new Image(5,12)
+      dot.src = "images/dot.gif"
+      dot2 = new Image(5,12)
+      dot2.src = "images/dot2.gif"
+   }
+   function un(nom) {
+       if (ok == 1) {
+          if ((nom == "d1")&&(pick!=1)) {document.d1.src = dot2.src;}
+          if ((nom == "d2")&&(pick!=2)) {document.d2.src = dot2.src;}
+          if ((nom == "d3")&&(pick!=3)) {document.d3.src = dot2.src;}
+          if ((nom == "d4")&&(pick!=4)) {document.d4.src = dot2.src;}
+          if ((nom == "d5")&&(pick!=5)) {document.d5.src = dot2.src;}
+          if ((nom == "d6")&&(pick!=6)) {document.d6.src = dot2.src;}
+          return true;
+       }
+   }
+   function deux(nom) {
+       if (ok == 1) {
+          if ((nom == "d1")&&(pick!=1)) {document.d1.src = dot.src;}
+          if ((nom == "d2")&&(pick!=2)) {document.d2.src = dot.src;}
+          if ((nom == "d3")&&(pick!=3)) {document.d3.src = dot.src;}
+          if ((nom == "d4")&&(pick!=4)) {document.d4.src = dot.src;}
+          if ((nom == "d5")&&(pick!=5)) {document.d5.src = dot.src;}
+          if ((nom == "d6")&&(pick!=6)) {document.d6.src = dot.src;}
+          return true;
+       }
+   }
+   function trois(nom) {
+       if (ok == 1) {
+          if (pick==1) {document.d1.src = dot.src;}
+          if (pick==2) {document.d2.src = dot.src;}
+          if (pick==3) {document.d3.src = dot.src;}
+          if (pick==4) {document.d4.src = dot.src;}
+          if (pick==5) {document.d5.src = dot.src;}
+          if (pick==6) {document.d6.src = dot.src;}
+          if ((nom == "d1")&&(pick!=1)) {document.d1.src = dot2.src; pick=1}
+          if ((nom == "d2")&&(pick!=2)) {document.d2.src = dot2.src; pick=2}
+          if ((nom == "d3")&&(pick!=3)) {document.d3.src = dot2.src; pick=3}
+          if ((nom == "d4")&&(pick!=4)) {document.d4.src = dot2.src; pick=4}
+          if ((nom == "d5")&&(pick!=5)) {document.d5.src = dot2.src; pick=5}
+          if ((nom == "d6")&&(pick!=6)) {document.d6.src = dot2.src; pick=6}
+          return true;
+       }
+   }
+// -->
+</script>
+</HEAD>
+<BODY BACKGROUND="images/mos.gif" BGCOLOR="#000000" TEXT="#FFFFFF" LINK="cornsilk" VLINK="white" ALINK="yellow" bgproperties='fixed'>
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 widTH=600 BORDER=0>
+  <TR>
+    <TD width=120></td><br>
+     <TD valign=bottom
+         ><IMG SRC="images\LOGO.GIF" BORDER=0 WIDTH=220 HEIGHT=30
+         ><HR ALIGN=left SIZE=1 NOSHADE COLOR="red" width=550></td>
+  </TR>
+  <TR>
+      <TD width=120>
+<a href="index.html" onmouseover="un('d1')" onmouseout="deux('d1')" onclick="trois('d1')"
+><IMG SRC="images/1.gif" BORDER=0 WIDTH=118 HEIGHT=16 style="position:relative;left:15%"
+></a><IMG SRC="images/dot.gif" BORDER=0 WIDTH=5 HEIGHT=12 name=d1
+><a href="page3.html" onmouseover="un('d3')" onmouseout="deux('d3')" onclick="trois('d3')"
+><IMG SRC="images/3.gif" BORDER=0 WIDTH=118 HEIGHT=16 style="position:relative;left:15%"></a
+><IMG SRC="images/dot2.gif" BORDER=0 WIDTH=5 HEIGHT=12 name=d3
+><a href="page4.html" onmouseover="un('d4')" onmouseout="deux('d4')" onclick="trois('d4')"
+><IMG SRC="images/5.gif" BORDER=0 WIDTH=118 HEIGHT=16 style="position:relative;left:13%"
+></a><IMG SRC="images/dot.gif" BORDER=0 WIDTH=5 HEIGHT=12 name=d4
+><a href="page5.html" onmouseover="un('d5')" onmouseout="deux('d5')" onclick="trois('d5')"
+><a href="page6.html" onmouseover="un('d6')" onmouseout="deux('d6')" onclick="trois('d6')"
+><IMG SRC="images/4.gif" BORDER=0 WIDTH=118 HEIGHT=16 style="position:relative;left:15%"
+></a><IMG SRC="images/dot.gif" BORDER=0 WIDTH=5 HEIGHT=12 name=d6></TD>
+  <TD>
+<CENTER><b>TERMS & REGULATIONS</b></CENTER>
+<h6 style="position:relative;left:10%">
+<P>READ THE TERMS OF THIS AGREEMENT AND ANY PROVIDED SUPPLEMENTAL LICENSE
+ TERMS (COLLECTIVELY "AGREEMENT") CAREFULLY BEFORE<b><U><I>You click I AGREE</I></U></b> .BY CLICKING 'I AGREE', YOU
+AGREE TO THE TERMS OF THIS AGREEMENT. INDICATE YOUR ACCEPTANCE OF THESE TERMS BY
+SELECTING THE "I AGREE" BUTTON AT THE END OF THIS AGREEMENT.
+IF YOU DO NOT AGREE TO ALL THESE TERMS, PROMPTLY SELECT THE "DISAGREE" BUTTON AT THE
+END OF THIS AGREEMENT.
+
+</P></h6>
+<h5 align='left' style="position:relative;left:8%"><p>1.  LICENSE TO USE.  E-SOLUTION PROVIDER grants you a non-exclusive and
+non-transferable license for the internal use only of the accompanying
+software and documentation and any error corrections provided by E-SOLUTION PROVIDER
+(collectively "Software"), by the number of users and the
+class of computer hardware for which the corresponding fee has been
+paid.
+</p>
+</h5>
+    </TD>
+	<tr><td>
+	<td>
+<h5 align='left' style="position:relative;left:10%">
+<p>
+	2.  RESTRICTIONS  Software is confidential and copyrighted. Title to
+Software and all associated intellectual property rights is retained by
+E-SOLUTION PROVIDER and/or its licensors.  Except as specifically authorized in any
+Supplemental License Terms, you may not make copies of Software. Unless
+enforcement is prohibited by applicable law, you may not modify,
+decompile, or reverse engineer Software.  Software is not designed or
+licensed for use in areas of illegal operations or for any harmful intention or 'cracking', 'hacking','phreaking' or any other related  illegal areas 
+	.  No right, title or
+interest in or to any trademark, service mark, logo or trade name of
+E-SOLUTION PROVIDER or its licensors is granted under this Agreement.
+
+
+	</p>
+	</h5>
+</td>
+</tr>
+<tr><td>
+<td>
+<h5 align='left' style="position:relative;left:10%">
+<BR>
+<p>
+3. LIMITED WARRANTY.  E-SOLUTION PROVIDER warrants to you to us e the SOFTWARE  for a period of ninety
+(90) days from the date of Registration, as evidenced by a copy of the
+receipt, the media on which Software is furnished (if any) will be free
+of defects in materials and workmanship under normal use.  Except for
+the foregoing, Software is provided "AS IS".  Your exclusive
+remedy and E-SOLUTION PROVIDER's entire liability under this limited warranty will be
+at E-SOLUTION PROVIDER's option to replace Software media or refund the fee paid for
+Software.
+
+</p>
+</td>
+<tr><td>
+<td>
+<h5 align='Left' style="position:relative;left:10%">
+<BR>
+<p align=Left>
+4.  DISCLAIMER OF WARRANTY.  UNLESS SPECIFIED IN THIS AGREEMENT, ALL
+EXPRESS OR IMPLIED CONDITIONS, REPRESENTATIONS AND WARRANTIES,
+INCLUDING ANY IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE OR NON-INFRINGEMENT ARE DISCLAIMED, EXCEPT TO THE
+EXTENT THAT THESE DISCLAIMERS ARE HELD TO BE LEGALLY INVALID.
+
+
+</p>
+</td>
+<tr><td>
+<td>
+<h5 align='Left' style="position:relative;left:10%">
+<BR>
+<p align=Left>
+5.  Limitation Of Liability.  To the extent not prohibited by law, in
+no event will <I><B>E-SOLUTION PROVIDER</B></I> or its licensors be liable for any lost revenue,
+profit or data, or for special, indirect, consequential, incidental or
+punitive damages, however caused regardless of the theory of liability,
+arising out of or related to the use of or inability to use software,
+even if E-SOLUTION PROVIDER has been advised of the possibility of such damages.  in no
+event will E-SOLUTION PROVIDER's liability to you, whether in contract, tort (including
+negligence), or otherwise, exceed the amount paid by you for software
+under this agreement.  the foregoing limitations will apply even if the
+above stated warranty fails of its essential purpose.
+</p>
+</td>
+<tr><td>
+<td>
+<h5 align='Left' style="position:relative;left:10%">
+<BR>
+
+
+5.  TERMINATION.  This Agreement is effective until terminated.  This Agreement will terminate immediately without notice
+from E-SOLUTION PROVIDER if you fail to comply with any provision of this Agreement.
+Upon Termination, you may have to re-register with us , to continue to avail the services offered by E-SOLUTION PROVIDER
+</td>
+<tr><td>
+<td>
+<h5 align='Left' style="position:relative;left:10%">
+<BR>
+6.  GOVERNING LAW.  Any action related to this Agreement will be
+governed by California law and controlling U.S. federal law.  No choice
+of law rules of any jurisdiction will apply.
+
+</td>
+<tr><td>
+<td>
+<h5 align='Left' style="position:relative;left:10%">
+<BR>
+7.  INTEGRATION.  This Agreement is the entire agreement between you
+and E-SOLUTION PROVIDER relating to its subject matter.  It supersedes all prior or
+contemporaneous oral or written communications, proposals,
+representations and warranties and prevails over any conflicting or
+additional terms of any quote, order, acknowledgment, or other
+communication between the parties relating to its subject matter during
+the term of this Agreement.  No modification of this Agreement will be
+binding, unless in writing and signed by an authorized representative
+of each party.
+
+</td>
+<tr><td>
+<td>
+<h5 align='Left' style="position:relative;left:10%">
+<BR>
+8. Trademarks and Logos. This Agreement does not authorize Licensee to
+use any E-SOLUTION PROVIDER name, trademark or logo. Licensee acknowledges as between
+it and E-SOLUTION PROVIDER that owns the E-SOLUTION PROVIDER trademark and all E-SOLUTION PROVIDER-related
+trademarks, logos and icons.
+</td>
+<tr><td>
+<td>
+<h5 align='Left' style="position:relative;left:10%">
+<BR>
+If you have a simple question and need an answer fast<BR>
+---------------------------------------------------------------------------------------<BR>
+Quickly find answers yourself online--Use Support Online to easily search the <BR>
+E-SOLUTION PROVIDER Base and other technical resources for fast, accurate answers. <BR>
+<BR><BR>
+If your question is urgent and more complex<BR>
+----------------------------------------------------------------------<BR>
+Telephone E-SOLUTION PROVIDER Product Support Services--Work with a support engineer to solve <BR>
+your issue<BR>
+<BR><BR>
+<I><H5>Note on Java Support.  The OS Components may contain support for programs written in Java.  Java technology is not fault tolerant and is not designed, manufactured, or intended for use or resale as on-line control equipment in hazardous environments requiring fail-safe performance, such as in the operation of nuclear facilities, aircraft navigation or communication systems, air traffic control, direct life support machines, or weapons systems, in which the failure of Java technology could lead directly to death, personal injury, or severe physical or environmental damage. Sun Microsystems, Inc. has contractually obligated E-SOLUTION PROVIDER to make this disclaimer.
+</H5></I></td>
+<tr><td>
+<td>
+<h5 align='Left' style="position:relative;left:10%">
+<BR>
+DISCLAIMER OF DAMAGES:
+Regardless of whether any remedy set forth herein fails of its essential purpose, in no event will E-SOLUTION PROVIDER be liable to you for any special, consequential, indirect or similar damages, including any lost profits or lost data arising out of the use or inability to use the software even if E-SOLUTION PROVIDER has been advised of the possibility of such damages.
+
+Some states do not allow the limitation or exclusion of liability for incidental or consequential damages so the above limitation or exclusion may not apply to you.
+
+In no case shall E-SOLUTION PROVIDER's liability exceed the purchase price for the software.  The disclaimers and limitations set forth above will apply regardless of whether you accept the Software.
+</td>
+<tr><td>
+<td>
+<h5 align='Left' style="position:relative;left:10%">
+<BR>
+For inquiries please  See The  <a href="page6.html">contact </a> Information 
+</h5>
+</td>
+</td>
+</tr>
+	<FORM name="reg1" action="http://localhost:8081/esp/register.html" method=get>
+	<tr><TD><td ALIGN=center><input type="submit" value="IAGREE" ></form>
+	<form name="reg2" action="http://localhost:8081/esp/index.html" method=get>
+	<input type="submit" value="DISAGREE">
+	</td>
+	</form></tr>
+  </TR>
+</TABLE>
+</BODY>
+</HTML>

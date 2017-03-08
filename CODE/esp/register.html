@@ -1,0 +1,180 @@
+<HTML>
+<head>
+<SCRIPT	LANGUAGE="JavaScript">
+<!--
+function back()
+{
+window.history.back();
+}
+
+function checkpass()
+{
+
+	 var a=new String(document.register.pwd.value);
+	 var b=a.length;
+	 if(b<=6) 
+	 {
+	   alert("it must be greater than 6 characters  & illegal characters found.");
+		document.register.pwd.focus();
+	 }
+ } 
+
+function confirmpasswords()
+{
+var a=document.register.pwd.value;
+var b=document.register.cfmpwd.value;
+if (a!=b)
+	{
+        	alert(" The passwords do not match. Re-enter them correctly...");
+		document.register.cfmpwd.focus();
+	}
+}
+function setstartdate()
+{
+var a=document.register.day1.value;
+var b=document.register.month1.value;
+var c=document.register.year1.value;
+document.register.ccstartdate.value=a+"-"+b+"-"+c;
+alert(document.register.ccstartdate.value);
+}
+
+function setenddate()
+{
+var a=document.register.day2.value;
+var b=document.register.month2.value;
+var c=document.register.year2.value;
+document.register.ccenddate.value=a+"-"+b+"-"+c;
+alert(document.register.ccenddate.value);
+}
+
+function check()
+{
+  var a=document.register.elements.length;
+     var i;
+   for(i=0;i<17;i++)
+   {
+     if(document.register.elements[i].value=="")
+		{
+			alert("the "+document.register.elements[i].name+" field is vacant please fill it");
+			document.register.elements[i].focus();
+		}
+   }
+}
+//-->
+</SCRIPT>
+</head>
+<BODY background="http://localhost:8081/esp/images/bkground.gif" text=watermelon>
+<CENTER><H1>Registration form</H1></CENTER>
+<FORM METHOD=POST name="register"  action="http://localhost:8081/esp/register.jsp">
+<TABLE style="position:relative;left:13%;font-weight:bold ">
+<TR>
+			<TD>First Name:</TD>
+			<TD><INPUT TYPE="text" NAME="firstname"></TD>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;User Name</td>
+			<td><INPUT TYPE="text" NAME="username"></td>
+			<INPUT TYPE="hidden" value="customer" name="usertype">
+</TR>
+<tr>
+			<td>Middle Name</td>
+			<td><INPUT TYPE="text" NAME="middlename"></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password</td>
+			<td><INPUT TYPE="password" name="pwd"></td>
+</tr>
+<TR>
+			<td>Last Name</td>
+			<td><INPUT TYPE="text" NAME="lastname"></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Confirm Password</td>
+			<td><INPUT TYPE="password" name="cfmpwd" onblur="confirmpasswords()"></td>
+</tr>
+<tr>
+			<TD>Address</TD>
+			<TD><TEXTAREA NAME="address" rows=4 COLS="16"></TEXTAREA></TD>
+			 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phoneno</td>
+			 <td><INPUT TYPE="text" NAME="phoneno"></td>
+</tr>
+<tr>
+			 <td>Email-id</td>
+			 <td><INPUT TYPE="text" NAME="emailid"></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FaxNo</td>
+			<td><INPUT TYPE="text" NAME="faxno"></td>
+</TR>
+			<td>State</td>
+			<td><INPUT TYPE="text" NAME="state"></td>   
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Country</td>
+			<td><INPUT TYPE="text" NAME="country"></td>
+</tr>
+	</TABLE>
+	<BR><BR>
+<table style="position:relative;left:14%;font-weight:bold"> 
+<thead style="position:relative;left:15%;font-style: italic"><h2>---------Credit Card 
+Information--------------------------------------</h2></thead>
+<tr>		
+				<td>Credit Card Name</td>
+				<td><SELECT NAME="ccard">
+				<option>---select your card ---</option>
+				<option value="visa">visa</option>
+				<option value="master">master</option>
+				<option value="AmericanExpress">americanexpress</option>
+				</SELECT>
+				<td><INPUT TYPE="hidden"name="ccardname" value="document.register.ccard.value"></td>
+				</td>
+</tr>
+				<td>Name on Credit Card </td>
+			 <td><INPUT TYPE="text" NAME="creditname"></td>
+			 <td>Credit Card No</td>
+			<td><INPUT TYPE="text" NAME="ccardno">("should be 10 numbers")</td>
+</TR>
+			 <td>Credit Card Starts On</td> 
+			 <td><INPUT TYPE="text" NAME="day1" size=2>
+			 <SELECT NAME="month1">
+			 <option value="jan">Jan</option>
+			 <option value="feb">Feb</option>
+			 <option value="mar">Mar</option>
+			 <option value="apr">Apr</option>
+			 <option value="may">May</option>
+			 <option value="jun">Jun</option>
+			 <option value="jul">Jul</option>
+			 <option value="aug">Aug</option>
+	         	                  <option value="sep">Sep</option>
+			<option value="oct">Oct</option>
+			<option value="nov">Nov</option>
+			<option value="dec">Dec</option>
+			</SELECT>
+			Year<input type="text"name="year1" size=4 onblur="setstartdate()"></td>
+			<input type="hidden" name="ccstartdate"> 
+
+			 <td>Credit Card Expires On</td> 
+			 <td><INPUT TYPE="text" NAME="day2" size=2>
+			 <SELECT NAME="month2">
+			 <option value="jan">Jan</option>
+			 <option value="feb">Feb</option>
+			 <option value="mar">Mar</option>
+			 <option value="apr">Apr</option>
+			 <option value="may">May</option>
+			 <option value="jun">Jun</option>
+			 <option value="jul">Jul</option>
+			 <option value="aug">Aug</option>
+		    <option value="sep">Sep</option>
+			<option value="oct">Oct</option>
+			<option value="nov">Nov</option>
+			<option value="dec">Dec</option>
+			</SELECT>
+			Year<input type="text"name="year2" size=4 onblur="setenddate()"></td>
+	<input type="hidden" name="ccenddate"> 
+	</td>
+</tr>
+</table>
+<BR><BR>
+	<TABLE style="position:relative;left:35%">
+		<TR><font color="yellow">
+				<TD ><INPUT TYPE="submit"value="Register Me" onClick="check()"></TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<TD ><INPUT TYPE="reset"value="Clear form"></TD>
+								<center><td><b><font size="" color="YELLOW"><a href="http://localhost:8081/esp/index.html">homepage</a></font></b></td></center></font>
+		<td align=right ><font size="" color="YELLOW"><b><INPUT TYPE="submit" value="back" onClick="back()"></b></FONT></a>
+</td>
+
+		</TR>
+   </TABLE>
+</FORM>
+</BODY>
+</HTML>

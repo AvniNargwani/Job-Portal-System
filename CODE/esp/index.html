@@ -1,0 +1,167 @@
+<HTML>
+<HEAD>
+<TITLE>E-SOLUTION PROVIDER Home Page</TITLE>
+<script language="javascript">
+<!--
+ok = false; pick = 1;
+if (navigator.userAgent.indexOf ("Mozilla") != -1) {
+  ok = parseInt(navigator.appVersion.substring(0,1)) >= 3
+} else {}
+
+   if (ok == 1) {
+      dot = new Image(5,12)
+      dot.src = "images/dot.gif"
+      dot2 = new Image(5,12)
+      dot2.src = "images/dot2.gif"
+   }
+   function un(nom) {
+       if (ok == 1) {
+          if ((nom == "d1")&&(pick!=1)) {document.d1.src = dot2.src;}
+          if ((nom == "d2")&&(pick!=2)) {document.d2.src = dot2.src;}
+          if ((nom == "d3")&&(pick!=3)) {document.d3.src = dot2.src;}
+          if ((nom == "d4")&&(pick!=4)) {document.d4.src = dot2.src;}
+          if ((nom == "d6")&&(pick!=6)) {document.d6.src = dot2.src;}
+          return true;
+       }
+   }
+   function deux(nom) {
+       if (ok == 1) {
+
+          if ((nom == "d1")&&(pick!=1)) {document.d1.src = dot.src;}
+          if ((nom == "d2")&&(pick!=2)) {document.d2.src = dot.src;}
+          if ((nom == "d3")&&(pick!=3)) {document.d3.src = dot.src;}
+          if ((nom == "d4")&&(pick!=4)) {document.d4.src = dot.src;}
+          if ((nom == "d6")&&(pick!=6)) {document.d6.src = dot.src;}
+          return true;
+       }
+   }
+   function trois(nom) {
+       if (ok == 1) {
+          if (pick==1) {document.d1.src = dot.src;}
+          if (pick==2) {document.d2.src = dot.src;}
+          if (pick==3) {document.d3.src = dot.src;}
+          if (pick==4) {document.d4.src = dot.src;}
+          if (pick==6) {document.d6.src = dot.src;}
+          if ((nom == "d1")&&(pick!=1)) {document.d1.src = dot2.src; pick=1}
+          if ((nom == "d2")&&(pick!=2)) {document.d2.src = dot2.src; pick=2}
+          if ((nom == "d3")&&(pick!=3)) {document.d3.src = dot2.src; pick=3}
+          if ((nom == "d4")&&(pick!=4)) {document.d4.src = dot2.src; pick=4}
+          if ((nom == "d6")&&(pick!=6)) {document.d6.src = dot2.src; pick=6}
+          return true;
+       }
+   }
+
+   function check1()
+{
+ 	var a=document.f1.login.value;
+	var b=a.length;
+	var c=a.charAt(0);
+	if(isNaN(a) && (a!==""))
+	{	
+		if (b<4)
+		  {	
+			  alert("it must be greater than 4 characters"); 
+			   document.f1.login.focus();
+		  }
+	}
+	else
+	{
+	 		 alert("it should be only characters");
+			document.f1.login.focus();
+	 }
+} 
+
+function check2()
+{
+	 var a=document.f1.password.value;
+  	 var b=a.length;
+	 if(b<4)
+	 {
+		 alert("it must be greater than 4 characters");
+		document.f1.password.focus();
+	 }
+ } 
+function check3()
+{
+	   var i;
+   for(i=0;i<2;i++)
+   {
+     if(document.f1.elements[i].value=="")
+		{
+			alert("the "+document.f1.elements[i].name+" field is vacant please fill it");
+			document.f1.elements[i].focus();
+		}
+   }
+   }
+   function set()
+   {
+     document.f1.l1.value="customer";
+   }
+
+// -->
+</script>
+</HEAD>
+<BODY BACKGROUND="images/mos.gif" BGCOLOR="#FFffFF" TEXT="#FFFFFF" LINK="cornsilk" VLINK="yellow" ALINK="watermelon" onload="set()">
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH=600 BORDER=0>
+  <TR>
+    <TD width=120><br></TD>
+<TD  valign=bottom><IMG SRC="images\LOGO.GIF" BORDER=0 WIDTH=500 HEIGHT=40>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<hr ALIGN=left SIZE=1 NOSHADE COLOR="red" width=550 style="position:relative;left:16%;top:5%"></TD>
+        <td align=left></td> 
+  </TR>
+  <TR>
+    <TD width=120>
+<a href="http://localhost:8081/esp/index.html" onmouseover="un('d1')" onmouseout="deux('d1')" onclick="trois('d1')"
+><IMG SRC="images/1.gif" BORDER=0 WIDTH=118 HEIGHT=16 style="position:relative;left:15%"
+></a><IMG SRC="images/dot2.gif" BORDER=0 WIDTH=5 HEIGHT=12 name=d1
+
+><a href="http://localhost:8081/esp/page3.html" onmouseover="un('d3')" onmouseout="deux('d3')" onclick="trois('d3')"
+><IMG SRC="images/3.gif" BORDER=0 WIDTH=118 HEIGHT=16 style="position:relative;left:15%"></a
+><IMG SRC="images/dot.gif" BORDER=0 WIDTH=5 HEIGHT=12 name=d3
+><a href="http://localhost:8081/esp/page4.html" onmouseover="un('d4')" onmouseout="deux('d4')" onclick="trois('d4')" 
+><IMG SRC="images/5.gif" BORDER=0 WIDTH=118 HEIGHT=16 style="position:relative;left:13%"
+></a><IMG SRC="images/dot.gif" BORDER=0 WIDTH=5 HEIGHT=12 name=d4
+><a href="http://localhost:8081/esp/page5.html" onmouseover="un('d5')" onmouseout="deux('d5')" onclick="trois('d5')"
+><a href="http://localhost:8081/esp/page6.html" onmouseover="un('d6')" onmouseout="deux('d6')" onclick="trois('d6')"
+><IMG SRC="images/4.gif" BORDER=0 WIDTH=118 HEIGHT=16 style="position:relative;left:15%"
+></a><IMG SRC="images/dot.gif" BORDER=0 WIDTH=5 HEIGHT=12 name=d6></TD>
+    <TD>
+<CENTER><BR>
+<p><font size="4px" color="goodbabe">
+             &nbsp;&nbsp;<B>E-SOLUTION PROVIDER</B> provides 
+            comprehensive strategic Internet solutions 
+			&nbsp;&nbsp;with the highest level of 
+            service in the industry. Our technical and managerial expertise 
+            offers flexible end-to-end solutions.</P>
+            <P>&nbsp;&nbsp;From inception to launch 
+            and beyond, our focus on service, combined with our infrastructure 
+            solutions, deliver the performance, flexibility and power to 
+            confidently grow your business at Internet speed. </p></h3> </font>
+			
+</CENTER>
+    </TD>
+	</tr>
+	  </TR>
+</TABLE>
+
+<form name="f1" action="http://localhost:8081/esp/checkuser.jsp" method="post">
+<center><B><font size="3" color="yellow">Registered Users  Log In Here </b></font></center><br>
+<TABLE align=center border=0>
+<TR >
+<TD><b>Login</b></td><td><input type=text name="login"  onBlur="check1()" ></TD>
+</TR>
+<TR>
+	<TD><b>Password</b></td><td><input type=password  name="password"  onBlur="check2()" ></TD>
+</TR>
+<TR>
+	<TD><b></b></td><td><input type=hidden name="l1"  onBlur="check2()"></TD>
+</TR>
+<tr><td><td></td></tr>
+<tr>
+<td align=right><input type=submit value="send" onclick="check3()"></td><td align=center><input type="reset" value=clear></td>
+</tr>
+</TABLE>
+    </TD>
+  </TR>
+</form>
+</BODY>
+</HTML>

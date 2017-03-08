@@ -1,0 +1,153 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<script language="javascript">
+<!--
+ok = false; pick = 3;
+if (navigator.userAgent.indexOf ("Mozilla") != -1) {
+  ok = parseInt(navigator.appVersion.substring(0,1)) >= 3
+} else {}
+
+   if (ok == 1) {
+      dot = new Image(5,12)
+      dot.src = "images/dot.gif"
+      dot2 = new Image(5,12)
+      dot2.src = "images/dot2.gif"
+   }
+   function un(nom) {
+       if (ok == 1) {
+          if ((nom == "d1")&&(pick!=1)) {document.d1.src = dot2.src;}
+          if ((nom == "d2")&&(pick!=2)) {document.d2.src = dot2.src;}
+          if ((nom == "d3")&&(pick!=3)) {document.d3.src = dot2.src;}
+          if ((nom == "d4")&&(pick!=4)) {document.d4.src = dot2.src;}
+          if ((nom == "d6")&&(pick!=6)) {document.d6.src = dot2.src;}
+          return true;
+       }
+   }
+   function deux(nom) {
+       if (ok == 1) {
+
+          if ((nom == "d1")&&(pick!=1)) {document.d1.src = dot.src;}
+          if ((nom == "d2")&&(pick!=2)) {document.d2.src = dot.src;}
+          if ((nom == "d3")&&(pick!=3)) {document.d3.src = dot.src;}
+          if ((nom == "d4")&&(pick!=4)) {document.d4.src = dot.src;}
+          if ((nom == "d6")&&(pick!=6)) {document.d6.src = dot.src;}
+          return true;
+       }
+   }
+   function trois(nom) {
+       if (ok == 1) {
+
+          if (pick==1) {document.d1.src = dot.src;}
+
+          if (pick==2) {document.d2.src = dot.src;}
+          if (pick==3) {document.d3.src = dot.src;}
+          if (pick==4) {document.d4.src = dot.src;}
+          if (pick==6) {document.d6.src = dot.src;}
+          if ((nom == "d1")&&(pick!=1)) {document.d1.src = dot2.src; pick=1}
+          if ((nom == "d2")&&(pick!=2)) {document.d2.src = dot2.src; pick=2}
+          if ((nom == "d3")&&(pick!=3)) {document.d3.src = dot2.src; pick=3}
+          if ((nom == "d4")&&(pick!=4)) {document.d4.src = dot2.src; pick=4}
+          if ((nom == "d6")&&(pick!=6)) {document.d6.src = dot2.src; pick=6}
+
+         return true;
+       }
+   }
+// -->
+</script>
+</HEAD>
+<BODY BACKGROUND="images/mos.gif" BGCOLOR="#000000" TEXT="#FFFFFF" LINK="cornsilk" VLINK="white" ALINK="yellow" >
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 widTH=600 BORDER=0>
+  <TR>
+    <TD width=120></td><br>
+     <a name="top"><TD valign=bottom
+         ><IMG SRC="images\LOGO.GIF" BORDER=0 WIDTH=220 HEIGHT=30
+         ><HR ALIGN=left SIZE=1 NOSHADE COLOR="red" width=550></td></a>
+  </TR>
+  <TR>
+    <TD width=120>
+<a href="index.html" onmouseover="un('d1')" onmouseout="deux('d1')" onclick="trois('d1')"
+><IMG SRC="images/1.gif" BORDER=0 WIDTH=118 HEIGHT=16 style="position:relative;left:15%"
+></a><IMG SRC="images/dot.gif" BORDER=0 WIDTH=5 HEIGHT=12 name=d1
+
+><a href="page3.html" onmouseover="un('d3')" onmouseout="deux('d3')" onclick="trois('d3')"
+><IMG SRC="images/3.gif" BORDER=0 WIDTH=118 HEIGHT=16 style="position:relative;left:15%"></a
+><IMG SRC="images/dot2.gif" BORDER=0 WIDTH=5 HEIGHT=12 name=d3
+><a href="page4.html" onmouseover="un('d4')" onmouseout="deux('d4')" onclick="trois('d4')"
+><IMG SRC="images/5.gif" BORDER=0 WIDTH=118 HEIGHT=16 style="position:relative;left:13%"
+></a><IMG SRC="images/dot.gif" BORDER=0 WIDTH=5 HEIGHT=12 name=d4
+><a href="page5.html" onmouseover="un('d5')" onmouseout="deux('d5')" onclick="trois('d5')"
+><a href="page6.html" onmouseover="un('d6')" onmouseout="deux('d6')" onclick="trois('d6')"
+><IMG SRC="images/4.gif" BORDER=0 WIDTH=118 HEIGHT=16 style="position:relative;left:15%"
+></a><IMG SRC="images/dot.gif" BORDER=0 WIDTH=5 HEIGHT=12 name=d6></TD>
+<TD>
+<CENTER><br>
+<h3><b>SECURITY SERVICES</b></h3><center></a>
+<P>&nbsp;&nbsp;&nbsp;
+At E-SOLUTON PROVIDER, the safety and integrity of the data and servers entrusted &nbsp;&nbsp;to our care is something we take very seriously. We go to great lengths to ensure your &nbsp;&nbsp;&nbsp;company's data is as secure and private as it possiblycan, and  that it remains that way. &nbsp;&nbsp;&nbsp;Our security products include managed firewall services, virtual private networks &nbsp;&nbsp;&nbsp;&nbsp;(VPNs and point-to-point IPSEC tunneling) and comprehensive, fully automated site security audits.<br>
+ &nbsp;&nbsp;To learn more about what 
+            E-SOLUTON PROVIDER can do to fulfill your server and data security needs, 
+            please contact your E-SOLUTON PROVIDER Sales Representative.<br>
+			</center></P>
+		</td>	
+    <tr>
+  <td><td><br><i><font size="+2" color="yellow">Other Services Offered By us</font></i>
+  <li><a href="#managed">MANAGED SERVICES</a></li>
+  <li><a href="#internet">INTERNET SERVICES</a></li>
+  <li><a href="#data">DATA CENTER SERVICES</a></li>
+ <li><a href="page5.html">SOFTWARE SERVICES</a></li>
+  <center><b><br><br><br><br>
+ 
+   <a name="internet">
+<br><br><br><br><br><br>
+   <h3><u>INTERNET SERVICES</U></h3></b></a>
+			<p>In addition to its core 
+            Monitoring and Managed Services, E-SOLUTION PROVIDER provides an entire array 
+            of services beyond those offered by many traditional Internet 
+            Service Providers (ISPs), ranging from virtual hosting of your web 
+            site in a shared environment, to site accessibility from remote 
+            locations over the Internet through secure, virtual private networks 
+            (VPN) to professional web site design services.</P>
+            <P>Whatever your company's 
+            needs may be regarding its commercial presence on the Internet, 
+            E-SOLUTION PROVIDER has a service plan that can be tailored to meet your 
+            specific requirements.
+           </center></P><br><br><br><a href="#top">Top</a>
+  </td>
+  </tr>
+  <tr>
+  <td><td><br><br><br><a name="data">
+  <br><br><br><br><br><br><center><b><h3><U>DATA CENTER SERVICES</U></H3></b></center></a>
+<p>E-SOLUTION PROVIDER is able to offer 
+            a range of services for our clients with Data Center needs. We are 
+            able to offer a seamless interface to the top colocation providers, 
+            who we have well established relationships with. As a result, you 
+            are able to leverage the economies of scale while centralizing your 
+            point of contact with E-SOLUTION PROVIDER. For clients in need of a lower cost 
+            alternative, E-SOLUTION PROVIDER offers hosting arrangements that will fit 
+            these needs.</FONT></P><br><br><a href="#top">Top</a>
+  </td>
+    </tr>
+  <tr><td><td><br><br><br><br><br><br><br><br><a name="managed"><center><b><h3><U> MANAGED SERVICES</U></H3></b></center></a>
+  E-SOLUTION PROVIDER Managed 
+            Infrastructure Services are designed to provide a wide range of 
+            flexible options aimed at ensuring you have the IT infrastructure 
+            needed to host your business application. At the same time your 
+            existing technical resources can remain focused on critical 
+            strategic business initiatives.</FONT></P>
+            <P>At E-SOLUTION PROVIDER, we 
+            understand the significant challenges faced in launching a new 
+            application fast and reliably. Our experience and knowledge gives us 
+            the expertise to handle the difficulties inherent in managing the 
+            complexity of tools, technology and staff to keep your business up 
+            and running 24 x 7.</P>
+            <P>Our Managed 
+            Infrastructure Service offerings provide a variety of options and 
+            vary in the level of services they provide. This gives you the 
+            flexibility to choose from a wide range of services as your needs 
+            grow and change.<br><br><a href="#top">Top</a>
+  </td></tr>
+  </TR>
+</TABLE></CENTER>
+</BODY>
+</HTML>

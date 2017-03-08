@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<script language="javascript">
+function check1()
+{
+ 	var a=document.f1.login.value;
+ 	var b=a.length;
+	if(isNaN(a) && (a!==""))
+	{   
+		 if(b<6)
+			  {
+				document.f1.login.focus();				
+			  }	 
+
+	 }	
+	 else
+	 {
+	   document.f1.login.focus();	
+	 }
+
+} 
+
+function check2()
+{
+	 var a=document.f1.password.value;
+  	 var b=a.length;
+	 if(b<6)
+	 {
+		
+		document.f1.password.focus();
+	 }
+ } 
+function check3()
+{
+	   var i;
+   for(i=0;i<2;i++)
+   {
+     if(document.f1.elements[i].value=="")
+		{
+			alert("the "+document.f1.elements[i].name+" field is vacant please fill it");
+			document.f1.elements[i].focus();
+		}
+   }
+
+} 
+</script>
+</HEAD>
+<BODY  background="images/mos.gif" text="#333399">
+<form name="f1" action="http://localhost:8081/servlet/checkuser" method="post" target="_top">
+<center>
+<TABLE>
+<TR>
+	<TD><b>login::</b>
+		<input type=text name="login" style="position:relative;top:10%;left:12%" onBlur="check1()" ></TD>
+	</TR>
+<TR>
+	<TD><b>password::</b><input type=password name="password"  onBlur="check2()"></TD>
+</TR>
+<tr>
+<td><b>category::</b>
+<SELECT NAME="l1" width="">
+<option name="0" >customer</option>
+</SELECT>
+</td>
+<tr>
+<td><center><input type=submit value="send" onclick="check3()"></center></td>
+</tr>
+</TABLE>
+</center>
+</b>
+</form>
+</BODY>
+</HTML>

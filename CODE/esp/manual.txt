@@ -1,0 +1,6 @@
+1)copy esp dir in any drive
+2)create oracle user with id=esp;
+		        pwd=esp;
+3)create dsn with name esp;
+4)copy esp.dmp in bin
+5)run http://localhost:8081/esp/index.html	

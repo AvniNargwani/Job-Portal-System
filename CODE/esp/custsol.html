@@ -1,0 +1,33 @@
+<HTML><head>
+<script language="javascript">
+function back()
+{
+window.history.back();
+}
+</script>
+</head>
+<BODY background="images/mos.gif" text=white>
+<IMG SRC="images\LOGO.GIF" width=200 height=30 style="position:relative;left:15.5%;top:6%"><br>
+<hr ALIGN=left SIZE=1 NOSHADE COLOR="red" width=550 style="position:relative;left:16%;top:5%"><BR><BR>
+<br><center><font size="" color="yellow"><h3>SOLUTION</h3></font>
+
+<FORM METHOD=POST ACTION="http://localhost:8081/esp/solndisp.jsp">
+<TABLE>
+<TR>
+	<TD><b>Enter User Name</b></TD>
+	<TD><INPUT TYPE="text" NAME="username"></TD>
+</TR>
+<TR>
+	<TD><br></TD>
+</TR>
+<TR>
+	<TD align=right><INPUT TYPE="submit"value="Send&nbsp;"></TD>
+	<TD align=center><INPUT TYPE="reset" value="Clear"></TD>
+	<td><INPUT TYPE="submit" value="BACK" onClick="back()"></td>
+</TR>
+</TABLE><br><br>
+<a 
+ href="http://localhost:8081/esp/index.html"><font size="" color="YELLOW"><b>HOMEPAGE</b></FONT></a>
+</FORM>
+</BODY>
+</HTML>

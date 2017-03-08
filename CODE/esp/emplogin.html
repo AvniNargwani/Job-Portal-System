@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<script language="javascript">
+function check1()
+{
+ 	var a=document.f1.login.value;
+ 	var b=a.length;
+	if(isNaN(a) && (a!==""))
+	{   
+		 if(b<4)
+			  {
+				alert("it must be greater than 4 characters"); 
+				document.f1.login.focus();				
+			  }	 
+	 }	
+	else
+	{
+	 		 alert("it should be only characters");
+			document.f1.login.focus();		
+	}
+} 
+
+function check2()
+{
+		 var a=document.f1.password.value;
+  	 var b=a.length;
+	 if(b<4)
+	 {
+		 alert("it must be greater than 4 characters");
+		document.f1.password.focus();
+	 }
+ } 
+function check3()
+{
+	   var i;
+   for(i=0;i<2;i++)
+   {
+     if(document.f1.elements[i].value=="")
+		{
+			alert("the "+document.f1.elements[i].name+" field is vacant please fill it");
+			document.f1.elements[i].focus();
+		}
+   }
+
+} 
+function back()
+{
+window.history.back();
+}
+</script>
+</HEAD>
+<BODY  background="images/mos.gif" text="#FFFFFF">
+<A HREF="http://localhost:8081/esp/index.html"><img src="images\LOGO.GIF"  align="" border="0" width=200 height=30 STYLE="position:relative;left:15.5%;top:6%"></A>
+<hr ALIGN=left SIZE=1 NOSHADE COLOR="red" width=550 style="position:relative;left:16%;top:3.5%"><BR>
+<br>
+<form name="f1" action="http://localhost:8081/esp/checkemp.jsp" method="post" target="_top">
+<center>
+<font size="" color="yellow"><h3 >INTERNAL LOGIN</H3></FONT></font>
+<TABLE >
+<TR>
+      <TD><B>LOGIN</B>&nbsp;&nbsp;&nbsp;</td><td>
+        <input type=text name="login"  onBlur="check1()" >
+      </TD>
+</TR>
+<TR><TD><b>PASSWORD&nbsp;&nbsp;&nbsp;</b></td><td><input type=password name="password"  onBlur="check2()"></TD>
+</TR><tr>
+<td><b>CATEGORY&nbsp;&nbsp;&nbsp;</b></td><td><SELECT NAME="l1">
+<option name="0"></option>
+<option name="1" >sub manager</option>
+<option name="2"> support person</option>
+<option name="3"> sales person</option>
+<option name="4"> super manager</option>
+</SELECT>
+</td>
+</tr>
+<tr>
+<td><br></td></tr>
+<tr>
+<td><CENTER><input type=submit value="send" onclick="check3()"></CENTER></td>
+<td><INPUT TYPE="submit" value="BACK" onClick="back()"></td>
+</tr>
+</TABLE></CENTER>
+
+</form>
+</BODY>
+</HTML>
